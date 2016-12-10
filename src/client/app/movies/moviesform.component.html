@@ -14,3 +14,28 @@
 
 {{ formGroupMovie.value | json }}
 {{formGroupMovie.status }}
+<br /><br />
+<hr>
+
+<br /><br />
+{{contact}}
+<br />
+<div [innerText]="email" ></div>
+
+<input type="text" #name placeholder="nom"  />
+
+<button (click)="onClick($event, name.value)">ok</button>
+
+<input type="text" [(ngModel)]="movieTitle">
+{{movieTitle}}
+
+<br /><br />
+<hr>
+
+<br /><br />
+
+<ul>
+    <li *ngFor="let feature of features">
+        {{feature.description}}
+    </li>
+</ul>

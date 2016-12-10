@@ -8,7 +8,24 @@ import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms'
     templateUrl: 'moviesform.component.html',
 })
 export class MoviesFormComponent implements OnInit {
-    contact:string;
+    contact:string = "Contactez-nous";
+    email:string = "mail@mail.com";
+    movieTitle:string = "titre";
+
+    features = [
+        {
+            description : "description 1"
+        },
+        {
+            description : "description 2"
+        },
+        {
+            description : "description 3"
+        }
+    ]
+
+
+
 
     formGroupMovie: FormGroup;
 
@@ -36,4 +53,11 @@ export class MoviesFormComponent implements OnInit {
     onMovieSubmit(){
         console.log(this.formGroupMovie);
     }
+
+
+    onClick(evt:any, userName:string){
+        console.log(evt, userName);
+    }
+
+
 }
